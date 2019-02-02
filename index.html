@@ -17,10 +17,10 @@
         </form>
         <ul>
           <li>
-            <button type="button">Войти</button>
+            <a href="#">Войти</a>
             <div class="visually-hidden">
-              <p>Псарёв Иван</p>
-              <button type="button">Выйти</button>
+              <p><output name="userName">Псарёв Иван</output></p>
+              <a href="#">Выйти</a>
             </div>
           </li>
           <li><a href="#">Сравнить</a></li>
@@ -229,7 +229,13 @@
     </div>
     <div>
       <ul>
-        <li><a href="#">Войти</a></li>
+        <li>
+          <a href="#">Войти</a>
+          <div class="visually-hidden">
+            <p><output name="userName">Псарёв Иван</output></p>
+            <a href="#">Выйти</a>
+          </div>
+        </li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
@@ -239,5 +245,18 @@
       </a>
     </div>
   </footer>
+  <section>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <a href="#" aria-label="Закрыть форму"></a>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for="user-name">Ваше имя:</label>
+      <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+      <label for="user-email">Ваш e-mail:</label>
+      <input type="email" id="user-email" name="user-email" placeholder="email@example.com">
+      <label for="user-text-send">Текст письма:</label>
+      <textarea name="user-text-send" id="user-text-send" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      <button type="submit">Отправить</button>      
+    </form>
+  </section>
 </body>
 </html>
