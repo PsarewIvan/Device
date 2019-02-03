@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+ <div class="wrapper">
   <header>
-    <h1><a href="index.html">Device</a></h1>
-    <nav>
-      <div>
-        <form action="post">
-          <input type="text">
-          <button type="submit">Найти</button>
+    <h1 class="logo"><a href="index.html">Device</a></h1>
+    <nav class="main-nav">
+      <div class="main-nav-top">
+        <form action="https://echo.htmlacademy.ru" method="post" class="search-form">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+          <input type="text" id="search" name="user-search" placeholder="Поиск по сайту">
+          <button type="submit" class="search-button">Найти</button>
         </form>
-        <ul>
+        <ul class="sub-nav">
           <li>
             <a href="#">Войти</a>
             <div class="visually-hidden">
@@ -27,7 +29,7 @@
           <li><a href="#">Корзина</a></li>
         </ul>
       </div>
-      <div>
+      <div class="main-nav-bottom">
         <ul>
           <li><a href="#">Каталог товаров</a>
             <ul>
@@ -204,5 +206,7 @@
     </div>
   </footer>
   </footer>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
