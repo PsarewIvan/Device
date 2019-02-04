@@ -109,6 +109,7 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .search-form {
@@ -190,10 +191,6 @@ header {
   display: block;
 }
 
-.sub-nav {
-  width: 500px;
-}
-
 .search-button {
   margin: 0;
   padding: 0;
@@ -215,6 +212,210 @@ header {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.sub-nav {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sub-nav li {
+  width: 100px;
+  position: relative;
+  padding-left: 25px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sub-nav li:first-child {
+  width: 260px;
+}
+
+.sub-nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+.sub-nav a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0;
+}
+
+.sub-nav li:nth-child(1) a::after {
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/icon/user.svg);
+  top: 9px;
+}
+
+.sub-nav li:nth-child(2) a::after {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/icon/compare.svg);
+  top: 11px;
+}
+
+.sub-nav li:nth-child(3) a::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/icon/cart.svg);
+  top:9px;
+}
+
+.sub-nav a:first-of-type:hover,
+.sub-nav a:first-of-type:focus {
+  opacity: 0.6;
+}
+
+.sub-nav a:first-of-type:active {
+  opacity: 0.3;
+}
+
+.user-login {
+  margin-right: 17px;
+}
+
+.logout-button {
+  opacity: 0.3;
+}
+
+.logout-button:hover,
+.logout-button:focus {
+  opacity: 0.6;
+}
+
+.main-nav-bottom {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.main-nav-bottom a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.main-nav-bottom a:hover,
+.main-nav-bottom a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-nav-bottom a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-link {
+  width: 440px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.catalog-link a {
+  padding-right: 20px;
+}
+
+.sub-nav-bottom {
+  display: none;
+  position: absolute;
+  letter-spacing: normal;
+  margin-top: 20px;
+  top: 0;
+}
+
+.sub-nav-bottom a {
+  text-transform: none;
+  font-family: 'OpenSansLight', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+.sub-nav-bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav-bottom-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.main-nav-bottom-block li {
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.catalog-link > a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/icon/plus.svg');
+  background-repeat: no-repeat;
+  top: 3px;
+  right: -10px;
+  opacity: 0.3;
+}
+
+.catalog-link a:hover ~ .sub-nav-bottom,
+.catalog-link a:focus ~ .sub-nav-bottom {
+  ddisplay: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+}
+
+.sub-nav-bottom {
+  background-color: aqua;
+}
 
 
 
@@ -233,3 +434,6 @@ header {
 
 
 
+.display-none {
+  display: none;
+}

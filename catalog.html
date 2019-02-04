@@ -19,19 +19,18 @@
         </form>
         <ul class="sub-nav">
           <li>
-            <a href="#">Войти</a>
-            <div class="visually-hidden">
-              <p><output name="userName">Псарёв Иван</output></p>
-              <a href="#">Выйти</a>
-            </div>
+            <span class="user-login display-none"><a href="#">Псарёв Иван</a></span>
+            <a href="#" class="login-button">Войти</a>
+            <a href="#" class="logout-button display-none">Выйти</a>
           </li>
           <li><a href="#">Сравнить</a></li>
           <li><a href="#">Корзина</a></li>
         </ul>
       </div>
-      <div class="main-nav-bottom">
-        <ul>
-          <li><a href="#">Каталог товаров</a>
+      <ul class="main-nav-bottom">
+        <li class="catalog-link">
+          <a href="#">Каталог товаров</a>
+          <div class="sub-nav-bottom">
             <ul>
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -44,12 +43,14 @@
             <ul>
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
-          </li>
+          </div>
+        </li>
+        <div class="main-nav-bottom-block">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
-        </ul>
-      </div>
+        </div>
+      </ul>
     </nav>
   </header>
   <main>
