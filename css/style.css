@@ -745,7 +745,17 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-bottom: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+}
+
+.services-background {
+  position: absolute;
+  height: 45%;
+  width: 200vw;
+  background-color: #e5e5e5;
+  z-index: -10;
+  margin-left: -50vw;
+  margin-top: 97px;
 }
 
 .slider-item {
@@ -783,6 +793,7 @@ header {
   padding-right: 0;
   text-align: center;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .services-button-active,
@@ -880,6 +891,300 @@ header {
   -webkit-filter: none;
   filter: none;
 }
+
+.info-contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.info,
+.contact {
+  width: 560px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.info h2,
+.contact h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  color: #000;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.info h2::after,
+.contact h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  background-color: #000;
+  top: -55px;
+}
+
+.info p,
+.contact p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.info p {
+  max-width: 460px;
+}
+
+.info p:last-of-type {
+  margin-bottom: 80px;
+}
+
+.info-link {
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  list-style: none;
+  margin-bottom: 60px;
+}
+
+.info-link li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.info-link li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  top: 12px;
+  left: -30px;
+}
+
+.info-link a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.write-us-button,
+.about-us-button {
+  width: 260px;
+  margin-top: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 60px;
+  background-color: #464646;
+}
+
+.logo-footer-block {
+  width: 360px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.logo-footer {
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffc600;
+}
+
+.footer-adress {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.nav-footer-block {
+  width: 440px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.footer-nav {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.footer-nav ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 3px;
+  line-height: 24px;
+}
+
+.footer-social-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer-social-nav li {
+  margin-right: 25px;
+}
+
+.footer-social-nav li:last-child {
+  margin-right: 0;
+}
+
+.sub-nav-footer-block {
+  width: 360px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.sub-nav-footer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.sub-nav-footer li {
+  margin-right: 60px;
+}
+
+.sub-nav-footer li:last-child {
+  margin-right: 0;
+}
+
+.sub-nav-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-tel {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: right;
+}
+
+.htmlacademy-logo {
+  margin-left: auto;
+}
+
+
+
 
 
 

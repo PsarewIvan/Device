@@ -214,8 +214,8 @@
       <h2 class="visually-hidden">Что мы можем предложить</h2>
       <div class="slider-item">
         <button type="button" class="button services-button services-button-active">Доставка</button>
-        <button type="button" class="button services-button">Кредит</button>
         <button type="button" class="button services-button">Гарантия</button>
+        <button type="button" class="button services-button">Кредит</button>
       </div>
       <div class="slider-services">
         <figure class="slide-service">
@@ -237,6 +237,7 @@
           </div>
         </figure>
       </div>
+      <div class="services-background"></div>
     </section>
     <section class="logotypes">
       <h2 class="visually-hidden">Наши спосноры</h2>
@@ -261,42 +262,42 @@
         </a>
       </div>
     </section>
-    <div>
-      <section>
-        <h2>О нас</h2>
+    <div class="info-contact-wrapper">
+      <section class="info">
+        <h2 class="info-head">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
+        <ul class="info-link">
           <li><a href="#">Деловые Линии</a></li>
           <li><a href="#">Автотрейдинг</a></li>
           <li><a href="#">ЖелДорЭкспедиция</a></li>
         </ul>
-        <a href="#">Подробнее о нас</a>
+        <a href="#" class="button about-us-button">Подробнее о нас</a>
       </section>
-      <section>
-        <h2>Контакты</h2>
+      <section class="contact">
+        <h2 class="contact-head">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div>
+        <div class="map-wrapper">
           <img src="img/map-min.png" alt="Карта. г. Москва, улица Строителей, 15" width="560" height="222">
         </div>
-        <a href="contact-us.html">Напишите нам</a>
+        <a href="contact-us.html" class="button write-us-button">Напишите нам</a>
       </section>
     </div>
   </main>
-  <footer>
-    <div>
-      <p><a href="#">Device</a></p>
-      <p>г. Москва, ул. Строителей, 15 </p>
+  <footer class="main-footer">
+    <div class="logo-footer-block">
+      <a class="logo-footer">Device</a>
+      <p class="footer-adress">г. Москва, ул. Строителей, 15 </p>
     </div>
-    <div>
-      <nav>
+    <div class="nav-footer-block">
+      <nav class="footer-nav">
         <ul>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
-      <ul>
+      <ul class="footer-social-nav">
         <li><a href="#" aria-label="Facebook link">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#fff" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/></svg>
         </a></li>
@@ -308,20 +309,18 @@
         </a></li>
       </ul>
     </div>
-    <div>
-      <ul>
+    <div class="sub-nav-footer-block">
+      <ul class="sub-nav-footer">
         <li>
-          <a href="#">Войти</a>
-          <div class="visually-hidden">
-            <p><output name="userName">Псарёв Иван</output></p>
-            <a href="#">Выйти</a>
-          </div>
+          <span class="user-login-footer display-none"><a href="#">Псарёв Иван</a></span>
+          <a href="#" class="login-button-footer">Войти</a>
+          <a href="#" class="logout-button-footer display-none">Выйти</a>
         </li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
-      <a href="https://htmlacademy.ru" aria-label="HTML Academy link">
+      <p class="footer-tel">Тел.: +7 (495) 495-95-95</p>
+      <a href="https://htmlacademy.ru" class="htmlacademy-logo" aria-label="HTML Academy link">
         <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
       </a>
     </div>
