@@ -72,7 +72,8 @@ input[type="radio"].visually-hidden {
   padding: 8px 40px;
   position: relative;
   border: none;
-  background-color: transparent;;
+  background-color: transparent;
+  z-index: 1;
 }
 
 .button::before {
@@ -732,6 +733,10 @@ header {
 }
 
 .services {
+  background-image: linear-gradient(to bottom, #fff, #fff 100px, #e5e5e5 100px, #e5e5e5);
+}
+
+.services-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,18 +749,8 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-bottom: 70px;
-  margin-bottom: 100px;
-}
-
-.services-background {
-  position: absolute;
-  height: 45%;
-  width: 200vw;
-  background-color: #e5e5e5;
-  z-index: -10;
-  margin-left: -50vw;
-  margin-top: 97px;
+  padding-bottom: 130px;
+  margin-bottom: 90px;
 }
 
 .slider-item {
@@ -799,6 +794,7 @@ header {
 .services-button-active,
 .services-button:active {
   color: #f7e184;
+  z-index: 1;
 }
 
 .services-button-active::before,
@@ -1010,6 +1006,12 @@ header {
 }
 
 .main-footer {
+  background-color: #464646;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.main-footer-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1022,14 +1024,24 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 60px;
-  background-color: #464646;
 }
 
 .logo-footer-block {
   width: 360px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
+}
+
+.logo-footer-block::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
+  bottom: 0;
+  left: 0;
 }
 
 .logo-footer {
@@ -1040,11 +1052,14 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffc600;
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
 .footer-adress {
   margin: 0;
   padding: 0;
+  margin-bottom: 90px;
   color: #fff;
 }
 
@@ -1062,6 +1077,7 @@ header {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  margin-top: 75px;
 }
 
 .footer-nav {
@@ -1097,6 +1113,17 @@ header {
   font-size: 18px;
   letter-spacing: 3px;
   line-height: 24px;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  opacity: 0.6;
+}
+
+.footer-nav a:active {
+  opacity: 0.3;
 }
 
 .footer-social-nav {
@@ -1123,6 +1150,22 @@ header {
 
 .footer-social-nav li:last-child {
   margin-right: 0;
+}
+
+.footer-social-nav svg {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.footer-social-nav a:hover svg,
+.footer-social-nav a:focus svg {
+  opacity: 0.6;
+}
+
+.footer-social-nav a:active svg {
+  opacity: 0.1;
 }
 
 .sub-nav-footer-block {
@@ -1157,10 +1200,11 @@ header {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-bottom: 35px;
 }
 
 .sub-nav-footer li {
-  margin-right: 60px;
+  margin-right: 25px;
 }
 
 .sub-nav-footer li:last-child {
@@ -1168,8 +1212,59 @@ header {
 }
 
 .sub-nav-footer a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+  position: relative;
+  padding-left: 40px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.sub-nav-footer a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 15px;
+  top: 5px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.sub-nav-footer li:nth-child(1) a::after {
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/icon/user-gold.svg);
+}
+
+.sub-nav-footer li:nth-child(2) a::after {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/icon/compare-gold.svg);
+}
+
+.sub-nav-footer li:nth-child(3) a::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/icon/cart-gold.svg);
+}
+
+.sub-nav-footer a:hover,
+.sub-nav-footer a:focus {
+  color: #fff;
+}
+
+.sub-nav-footer a:hover::after,
+.sub-nav-footer a:focus::after {
+  opacity: 0.6;
+}
+
+.sub-nav-footer a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.sub-nav-footer a:active::after {
+  opacity: 0.3;
 }
 
 .footer-tel {
@@ -1177,6 +1272,7 @@ header {
   padding: 0;
   color: #fff;
   text-align: right;
+  margin-bottom: 50px;
 }
 
 .htmlacademy-logo {
