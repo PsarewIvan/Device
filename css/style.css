@@ -1478,6 +1478,25 @@ header {
   border: 3px solid transparent;
 }
 
+.modal-form input:hover,
+.modal-form textarea:hover {
+  background-color: rgba(229, 229, 229,0.8);
+}
+
+.modal-form input:active,
+.modal-form input:focus,
+.modal-form textarea:active,
+.modal-form textarea:focus {
+  background-color: transparent;
+  outline: none;
+  border: 3px solid rgba(240, 197, 46, 0.5);
+}
+
+.modal-form .input-invalid {
+  background-color: rgba(237, 181, 181, 0.5);
+  outline: none;
+}
+
 .modal-name,
 .modal-email {
   width: 360px;

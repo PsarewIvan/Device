@@ -43,6 +43,7 @@ logoutButtonFooter.addEventListener('click', function(evt) {
   loginButtonFooter.classList.remove('display-none');
 });
 
+
 //оживляем модалку
 var modalButton = document.querySelector('.write-us-button');
 var popup = document.querySelector('.modal-contact-us');
@@ -93,11 +94,29 @@ modalCloseWriteUs.addEventListener('click', function(evt) {
 });
 
 modalForm.addEventListener('submit', function(evt) {
+  inputName.classList.remove('input-invalid');
+  inputEmail.classList.remove('input-invalid');
+  inputMessage.classList.remove('input-invalid');
   if (!inputName.value || !inputEmail.value || !inputMessage.value) {
     evt.preventDefault();
     popup.classList.remove('modal-error');
     void popup.offsetWidth;
     popup.classList.add('modal-error');
+    if (!inputName.value) {
+      inputName.classList.remove('input-invalid');
+      void inputName.offsetWidth;
+      inputName.classList.add('input-invalid');
+    }
+    if (!inputEmail.value) {
+      inputEmail.classList.remove('input-invalid');
+      void inputEmail.offsetWidth;
+      inputEmail.classList.add('input-invalid');
+    }
+    if (!inputMessage.value) {
+      inputMessage.classList.remove('input-invalid');
+      void inputMessage.offsetWidth;
+      inputMessage.classList.add('input-invalid');
+    }
   } else {
     if (isStorage) {
       localStorage.setItem('login', inputName.value);
@@ -136,6 +155,7 @@ modalOverlay.addEventListener('click', function(evt) {
   }
 });
 
+
 //оживляем карту
 var popupMap = document.querySelector('.modal-map');
 var map = document.querySelector('#map');
@@ -155,31 +175,57 @@ modalCloseMap.addEventListener('click', function(evt) {
   modalOverlay.classList.add('display-none');
 });
 
+
 //оживляем главный сладйер
-var buttonSLideArray = document.querySelectorAll('.slide-button');
-var slideArray = document.querySelectorAll('.slide');
+var buttonsSLidesArray = document.querySelectorAll('.slide-button');
+var slidesArray = document.querySelectorAll('.slide');
 
-function slideChange(indexSlideOn, slideLength) {
-  if (indexSlideOn >= slideLength) return;
-  for (var i = 0; i < slideLength; i++) {
-    if (i === indexSlideOn) {
-      buttonSLideArray[i].classList.add('slide-button-current');
-      slideArray[i].classList.remove('display-none');
-    } else {
-      buttonSLideArray[i].classList.remove('slide-button-current');
-      slideArray[i].classList.add('display-none');
-    }
-  }
-}
-
-[].forEach.call(buttonSLideArray, function(el, i) {
+[].forEach.call(buttonsSLidesArray, function(el, i) {
   el.addEventListener('click', function(evt) {
     evt.preventDefault();
-    slideChange(this.valueOf(), buttonSLideArray.length);
+    slideChange(this.valueOf(), buttonsSLidesArray.length);
   }.bind(i));
 });
 
 
+//оживляем слайдер сервиса
+var buttonsServicesSlidesArray = document.querySelectorAll('.services-button');
+var slidesServicesArray = document.querySelectorAll('.slide-service');
+
+[].forEach.call(buttonsServicesSlidesArray, function(el, i) {
+  el.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    slideServicesChange(this.valueOf(), buttonsServicesSlidesArray.length);
+  }.bind(i));
+});
+
+
+//функции
+function slideChange(indexSlideOn, slideLength) {
+  if (indexSlideOn >= slideLength) return;
+  for (var i = 0; i < slideLength; i++) {
+    if (i === indexSlideOn) {
+      buttonsSLidesArray[i].classList.add('slide-button-current');
+      slidesArray[i].classList.remove('display-none');
+    } else {
+      buttonsSLidesArray[i].classList.remove('slide-button-current');
+      slidesArray[i].classList.add('display-none');
+    }
+  }
+}
+
+function slideServicesChange(indexSlideOn, slideLength) {
+  if (indexSlideOn >= slideLength) return;
+  for (var i = 0; i < slideLength; i++) {
+    if (i === indexSlideOn) {
+      buttonsServicesSlidesArray[i].classList.add('services-button-active');
+      slidesServicesArray[i].classList.remove('display-none');
+    } else {
+      buttonsServicesSlidesArray[i].classList.remove('services-button-active');
+      slidesServicesArray[i].classList.add('display-none');
+    }
+  }
+}
 
 
 
