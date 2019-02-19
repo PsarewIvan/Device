@@ -137,7 +137,6 @@ modalOverlay.addEventListener('click', function(evt) {
 });
 
 //оживляем карту
-
 var popupMap = document.querySelector('.modal-map');
 var map = document.querySelector('#map');
 var modalCloseMap = popupMap.querySelector('#close-modal-map');
@@ -155,6 +154,40 @@ modalCloseMap.addEventListener('click', function(evt) {
   popupMap.classList.remove('modal-show');
   modalOverlay.classList.add('display-none');
 });
+
+//оживляем главный сладйер
+var buttonSLideArray = document.querySelectorAll('.slide-button');
+var slideArray = document.querySelectorAll('.slide');
+
+function slideChange(indexSlideOn, slideLength) {
+  if (indexSlideOn >= slideLength) return;
+  for (var i = 0; i < slideLength; i++) {
+    if (i === indexSlideOn) {
+      buttonSLideArray[i].classList.add('slide-button-current');
+      slideArray[i].classList.remove('display-none');
+    } else {
+      buttonSLideArray[i].classList.remove('slide-button-current');
+      slideArray[i].classList.add('display-none');
+    }
+  }
+}
+
+[].forEach.call(buttonSLideArray, function(el, i) {
+  el.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    slideChange(this.valueOf(), buttonSLideArray.length);
+  }.bind(i));
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
