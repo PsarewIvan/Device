@@ -199,12 +199,7 @@ if (window.location.pathname === '/index.html') {    //опера не подд�
       slideServicesChange(this.valueOf(), buttonsServicesSlidesArray.length);
     }.bind(i));
   });
-}
-
-if (window.location.pathname === '/catalog-mono.html') {    //опера не поддерживается
-  
-}
-  
+} 
   
 //функции
 function slideChange(indexSlideOn, slideLength) {
