@@ -44,7 +44,7 @@ logoutButtonFooter.addEventListener('click', function(evt) {
   });
   
   
-if (window.location.pathname === '/index.html') {    //опера не поддерживается
+if (document.querySelector('#index')) {    //опера не поддерживается
   //оживляем модалку
   var modalButton = document.querySelector('.write-us-button');
   var popup = document.querySelector('.modal-contact-us');
