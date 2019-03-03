@@ -163,7 +163,7 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   margin: 0;
   padding: 8px 40px;
   position: relative;
@@ -201,7 +201,7 @@ header {
   background-color: #f7e296;
   margin-top: 40px;
   position: relative;
-  padding: 50px 60px 0;
+  padding: 14px 60px 0;
 }
 
 .logo a {
@@ -211,12 +211,13 @@ header {
   font-size: 48px;
   line-height: 48px;
   color: #000;
-  left: 60px;
+  left: 58px;
   top: -24px;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  letter-spacing: 0.5px;
 }
 
 .logo a[href]:hover,
@@ -252,7 +253,7 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .search-form {
@@ -362,6 +363,7 @@ header {
 .sub-nav {
   width: 500px;
   margin: 0;
+  margin-top: -4px;
   padding: 0;
   list-style: none;
   display: -webkit-box;
@@ -486,6 +488,10 @@ header {
   position: relative;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.catalog-link > a:first-child {
+  letter-spacing: 3.5px;
 }
 
 .main-nav-bottom a:hover,
@@ -658,7 +664,7 @@ header {
   width: 100px;
   height: 7px;
   background-color: #fff;
-  top: 50px;
+  top: 40px;
 }
 
 .slide:nth-of-type(1)::after {
@@ -680,7 +686,7 @@ header {
   font-weight: 800;
   font-size: 179px;
   line-height: 179px;
-  top: -5px;
+  top: -10px;
   right: 50px;
   color: #fff;
   z-index: 0;
@@ -701,13 +707,15 @@ header {
   position: relative;
   z-index: 1;
   margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 .main-description {
   margin: 0;
   padding: 0;
   width: auto;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
+  letter-spacing: 0.2px;
 }
 
 .item-feature {
@@ -734,7 +742,7 @@ header {
 .topItem-slide-buttons {
   display: block;
   position: absolute;
-  right: 60px;
+  right: 80px;
   bottom: 135px;
   z-index: 10;
 }
@@ -774,7 +782,7 @@ header {
 }
 
 .slide-item-button {
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 .item-feature tr:first-child {
